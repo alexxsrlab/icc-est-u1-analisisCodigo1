@@ -1,11 +1,14 @@
 public class App {
     public static void main(String[] args) {
 
-        MetodosOrdenamiento ordenador = new MetodosOrdenamiento();
-        int[] arregloBurbuja = { 34, 2, 10, 6, 7, 5, 1, 15 };
-        int[] arregloSeleccion = { 34, 2, 10, 6, 7, 5, 1, 15 };
-        int[] arregloInsercion = { 34, 2, 10, 6, 7, 5, 1, 15 };
 
+        Brenchmarking brenchmarking = new Brenchmarking();
+        //MetodosOrdenamiento ordenador = new MetodosOrdenamiento();
+        //int[] arregloBurbuja = { 34, 2, 10, 6, 7, 5, 1, 15 };
+        //int[] arregloSeleccion = { 34, 2, 10, 6, 7, 5, 1, 15 };
+        //int[] arregloInsercion = { 34, 2, 10, 6, 7, 5, 1, 15 };
+
+        
         // Insctucciones:
         // Todas las llamadas a los metodos deberan estar descomentadas y se debera
         // poder ejecutar
@@ -15,7 +18,7 @@ public class App {
         /// de ellos y resolviendo.
 
         /// Anotar en cada metodo el error encontrado y como lo cambio en TEXTO
-
+        /* 
         // Metodo burbujaTradicional
         int[] arregloBurbujaOrdenado1 = ordenador.burbujaTradicional(arregloBurbuja);
         System.out.println(
@@ -77,6 +80,6 @@ public class App {
         System.out.println(
         "Resultado insercion Metodo 3: " +
         java.util.Arrays.toString(arregloInsercionOrdenado3));
-
+        */
     }
 }
