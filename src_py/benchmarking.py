@@ -7,8 +7,21 @@ class Benchmarking:
     def __init__(self):
         print('Benchmarking instanciado')
         self.mO = MetodosOrdenamiento()
+        arreglo = self.build_arreglo(10000)  
+    
+    def build_arreglo(self, size):
+        return [random.randint(0, 10000) for _ in range(size)]
 
-        arreglo = self.build_arreglo(50000)
+    def medir_tiempo(self, funcion, arreglo):
+        inicio = time.perf_counter()
+        funcion(arreglo)
+        fin = time.perf_counter()
+        return (fin - inicio)
+
+        """
+        self.mO = MetodosOrdenamiento()
+
+        arreglo = self.build_arreglo(10000)
 
         tarea = lambda:self.mO.sort_bubble(arreglo)
 
@@ -25,6 +38,10 @@ class Benchmarking:
         area = lambda:self.mO.sort_seleccion(arreglo)
         nanosegundos = self.contar_con_nano_time(tarea)
         print(f'Tiempo en nanosegundos con metodo seleccion: {nanosegundos}' )
+        
+        area = lambda:self.mO.sort_shell(arreglo)
+        nanosegundos = self.contar_con_nano_time(tarea)
+        print(f'Tiempo en nanosegundos con metodo shell: {nanosegundos}' )
 
     def build_arreglo(self, tamano):
         arreglo = []
@@ -48,3 +65,4 @@ class Benchmarking:
         tarea()
         fin = time.time_ns()
         return ( fin - inicio) / 1_000_000_000.0
+        """
